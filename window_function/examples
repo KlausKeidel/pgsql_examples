@@ -1,0 +1,4 @@
+﻿SELECT 	x, 
+	array_agg(x) OVER (rows between current row 
+				and unbounded following)
+FROM 	generate_series(1, 3) as t(x)
